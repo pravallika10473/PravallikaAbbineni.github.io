@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Pravallika Abbineni</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="no-sidebar is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<section id="header">
+
+					<!-- Logo -->
+						<h1><a href="index.html">Pravallika Abbineni</a></h1>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								
+								<li><a href="projects.html">Projects</a></li>
+								
+								<li class="current"><a href="dkt.html">DKT</a></li>
+							</ul>
+						</nav>
+
+				</section>
+
+			<!-- Main -->
+				<section id="main">
+					<div class="container">
+
+						<!-- Content -->
+							<article class="box post">
+								<section>
+									<div>
+										<header>
+											<h2>Deep Knowledge Tracing</h2>
+											
+										</header>
+										<p>
+											In this Project, I implemented the paper <a href="https://stanford.edu/~cpiech/bio/papers/deepKnowledgeTracing.pdf" style="font-weight: 600;"> Deep Knowledge Tracing </a>. This is using deep learning for the Knowledge Tracing (KT) problem. 
+											 
+											 In a nutshell, KT aims to observe, represent, and quantify a student’s knowledge state, e.g., the mastery level of skills underlying the teaching materials.
+											
+											
+											
+											
+										</p>
+				   
+									</div>
+
+								</section>
+								
+								
+								<section>
+									<div style="margin-left: auto; margin-right: auto; width:70%">
+										<a class="image featured"><img src="images/kt.png" alt="" /></a>
+									</div>
+								</section>
+
+								<p align="justify">
+									To better understand the KT problem, let us consider the learning activity depicted in the above figure.
+                                    It shows an interaction scenario between a student and an Intelligent Tutoring System (ITS) in
+                                    which the student is given a sequence of questions taken from a question set {𝑞1, 𝑞2, 𝑞3, 𝑞4} and
+                                    asked to answer these questions. During the interaction, the ITS estimates the student’s knowledge
+                                    states over the skills {𝑘1, 𝑘2, 𝑘3, 𝑘4} (e.g., math skills such as addition, subtraction and multiplication)
+                                    that are required to answer these questions. However, capturing a student’s knowledge state is a
+									challenging task due to several reasons:
+									<li>Each question might require more than one skill, for example question
+										𝑞2 requires the skills {𝑘1, 𝑘3}. </li>
+									<li>Dependency among skills is another important factor to consider when tackling the KT
+										problem. For example, although 𝑞3 requires only skill 𝑘2, skills 𝑘1 and 𝑘4 are prerequisites
+										for skill 𝑘2 according to the dependency graph shown in the above fig. Thus, the mastery level of
+										skills required by the question 𝑞3 should also consider 𝑘1 and 𝑘4, in addition to skill 𝑘2.
+										</li>
+
+								</p>
+								<p align="justify">
+									There are many previous traditional methods for knowledge tracing problem like Bayesian Knowledge Tracing, Factor Analysis Models based on Item Response Theory(IRT), but Deep Knowledge Tracing (DKT) outperformed all of these models.
+
+								</p>
+								<section>
+									<div>
+										<p align="justify">
+											In this project, for DKT, Long Short Term Memory(LSTM) network was used as it takes 
+											into consideration of dependencies and relationship between the elements in time 
+											series. It was trained on a public dataset called "ASSISTments Skill-builder data 2009-2010", by analyzing the dataset, it’s possible to see that we have 30 
+											different attributes available. Among all these attributes, only three were selected 
+											to be used: the user identifier (called ‘user_id’); the ID of the problem's knowledge 
+											component(KC) (called ‘skill_id’); and a binary variable (called ‘correct’) that indicates 
+											whether the problem was answered correctly or not by the student. As the model will be trained to find the relationship between problems to 
+											predict a student's probabilities to respond correctly to a future problem, we need 
+											nothing more than these resources to build the proposed model. Given a sequence of interactions 𝑋 that contains the previous question answering
+											of a student, here we predict the probability 𝑝𝑡 of correctly answering a
+											new question 𝑞𝑡 at the time step 𝑡 by the student, i.e., 𝑝𝑡 = (𝑦𝑡 = 1|𝑞𝑡
+																												   , 𝑋)
+										</p>
+										<p>
+
+
+										</p>
+									</div>
+
+								</section>
+
+								
+								
+								
+							
+							
+								<section>
+									<header>
+										<h3>Additional Resources:</h3>
+									</header>
+									<p>
+										<li><a href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/" target="_blank"> Understanding LSTM networks Colah's Blog </a></li>
+										<li><a href="https://youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi" target="_blank"> Neural Networks 3Blue1Brown </a></li>
+										<li><a href="https://a.co/d/dgKa8uI" target="_blank"> Deep Learning by Ian Goodfellow </a></li>
+
+									</p>
+								</section>
+							</article>
+
+					</div>
+				</section>
+
+			
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
